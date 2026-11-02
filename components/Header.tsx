@@ -11,6 +11,7 @@ const LINKS = [
   { hash: "#work", label: "Work" },
   { hash: "#how", label: "How I work" },
   { hash: "#about", label: "About" },
+  { hash: "#skills", label: "Skills" },
   { hash: "#contact", label: "Contact" },
 ];
 

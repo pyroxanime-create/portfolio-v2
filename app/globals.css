@@ -34,6 +34,9 @@
   --chip: #232833;
   --phone: #000000;
   --shadow: rgba(0, 0, 0, 0.5);
+  --bar-1: #8a97ff;
+  --bar-2: #ffb98a;
+  --bar-3: #7fe0b8;
   color-scheme: dark;
 }
 
@@ -65,6 +68,9 @@
   --chip: #e3e6ec;
   --phone: #111318;
   --shadow: rgba(17, 19, 24, 0.16);
+  --bar-1: #3047e0;
+  --bar-2: #b84f14;
+  --bar-3: #0f7a52;
   color-scheme: light;
 }
 
@@ -651,6 +657,13 @@ button {
   font-stretch: 112%;
   text-decoration: none;
   border-bottom: 1px solid var(--line);
+}
+
+/* Make room for all five links on one row before the menu takes over. */
+@media (max-width: 1080px) {
+  .status-chip {
+    display: none;
+  }
 }
 
 @media (max-width: 900px) {
@@ -1409,6 +1422,102 @@ button {
   font-size: 16px;
   line-height: 1.5;
   color: var(--muted);
+}
+
+/* ---------- Skills ---------- */
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.skill-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 32px 44px;
+}
+
+.skill-group {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 16px;
+  border-top: 1.5px solid var(--ink);
+}
+
+.skill-group--1 { --bar: var(--bar-1); }
+.skill-group--2 { --bar: var(--bar-2); }
+.skill-group--3 { --bar: var(--bar-3); }
+
+.skill-group ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.skill__top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.skill__pct {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  transition: color 0.25s;
+}
+
+.skill__track {
+  position: relative;
+  display: block;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--chip);
+}
+
+.skill__fill {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: inherit;
+  background: var(--bar);
+}
+
+/* A slider thumb at the end of each bar, like a property in a design tool. */
+.skill__fill::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -7px;
+  width: 14px;
+  height: 14px;
+  margin-top: -7px;
+  border-radius: 50%;
+  background: var(--bar);
+  box-shadow: 0 0 0 3px var(--surface);
+  transition: transform 0.35s var(--ease);
+}
+
+.skill:hover .skill__fill::after {
+  transform: scale(1.4);
+}
+
+.skill:hover .skill__pct {
+  color: var(--ink);
 }
 
 /* ---------- Contact and footer ---------- */

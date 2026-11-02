@@ -1,8 +1,18 @@
 "use client";
 
 import Image from "next/image";
+import { motion, useReducedMotion } from "motion/react";
 import { Magnetic, Reveal, ArrowIcon } from "./Motion";
 import { site } from "@/content/site";
+import { skillGroups, skillsIntro } from "@/content/skills";
+import { setAccent } from "@/lib/accent";
+
+/** Same values as the --bar-1/2/3 tokens, for tinting the background on hover. */
+const BAR_ACCENT = {
+  1: { light: "#3047e0", dark: "#8a97ff" },
+  2: { light: "#b84f14", dark: "#ffb98a" },
+  3: { light: "#0f7a52", dark: "#7fe0b8" },
+} as const;
 
 function Wave({ text }: { text: string }) {
   let i = 0;
@@ -62,6 +72,54 @@ export function About() {
             <dd>Figma, Adobe Creative Suite, Clip Studio, Blender</dd>
           </div>
         </dl>
+      </div>
+    </Reveal>
+  );
+}
+
+/** Skill bars, as on the original site. Each bar fills when it scrolls into view. */
+export function Skills() {
+  const reduce = useReducedMotion();
+  return (
+    <Reveal as="section" id="skills" labelledBy="skills-h" className="tile pad skills">
+      <div className="section-head">
+        <h2 id="skills-h" className="display h-xl" style={{ fontSize: "clamp(44px, 5.4vw, 84px)" }}>
+          Skills
+        </h2>
+        <p className="muted" style={{ fontSize: 18, lineHeight: 1.45 }}>
+          {skillsIntro}
+        </p>
+      </div>
+      <div className="skill-groups">
+        {skillGroups.map((g) => (
+          <div
+            key={g.title}
+            className={`skill-group skill-group--${g.tone}`}
+            onPointerEnter={() => setAccent(BAR_ACCENT[g.tone])}
+            onPointerLeave={() => setAccent(null)}
+          >
+            <h3 className="label">{g.title}</h3>
+            <ul>
+              {g.items.map((s, i) => (
+                <li key={s.label} className="skill" data-annotate={`${s.label} ${s.percent}%`}>
+                  <span className="skill__top">
+                    <span>{s.label}</span>
+                    <span className="skill__pct">{s.percent}%</span>
+                  </span>
+                  <span className="skill__track" aria-hidden="true">
+                    <motion.span
+                      className="skill__fill"
+                      initial={{ width: "0%" }}
+                      whileInView={{ width: `${s.percent}%` }}
+                      viewport={{ once: true, margin: "0px 0px -6% 0px" }}
+                      transition={reduce ? { duration: 0 } : { duration: 1.1, delay: 0.15 + i * 0.08, ease: [0.16, 1, 0.3, 1] }}
+                    />
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
     </Reveal>
   );

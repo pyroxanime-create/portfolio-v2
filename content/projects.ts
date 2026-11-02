@@ -743,7 +743,7 @@ export const projects: Project[] = [
         { big: "152", small: "Students surveyed before any design started" },
       ],
     },
-    figmaUrl: "https://www.figma.com/design/G0t1JySY61M9XGD37L0eBc/mindspace?node-id=0-1",
+    figmaUrl: "https://www.figma.com/proto/3bkzByHTzxPITsdCCzRjla/Mindspace-ui?node-id=181-243&t=75YckE7NScAW5Fhz-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1",
     tryLabel: "View in Figma",
     seo: {
       title: "MindSpace case study",

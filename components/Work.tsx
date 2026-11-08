@@ -13,6 +13,7 @@ type Filter = "all" | Category;
 const FILTERS: { id: Filter; label: string }[] = [
   { id: "all", label: "All" },
   { id: "fintech", label: "Fintech" },
+  { id: "food", label: "Food" },
   { id: "travel", label: "Travel" },
   { id: "wellbeing", label: "Wellbeing" },
 ];

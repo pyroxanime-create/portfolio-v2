@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     template: "%s · Adam Calliste",
   },
   description:
-    "Adam Calliste designs clear, honest products and builds them as working prototypes you can try. Case studies in fintech, travel, food delivery and wellbeing.",
+    "Adam Calliste designs clear, honest products and builds them as working prototypes you can try. Case studies in fintech, travel, food delivery, social shopping and wellbeing.",
   openGraph: {
     title: "Adam Calliste — UX and product designer",
     description: "Clear, honest products, built as working prototypes you can try.",

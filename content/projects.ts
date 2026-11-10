@@ -1,4 +1,4 @@
-export type Category = "fintech" | "food" | "travel" | "wellbeing";
+export type Category = "fintech" | "food" | "shopping" | "travel" | "wellbeing";
 
 export type Shot = { src: string; alt: string; caption?: string };
 export type Pin = { x: string; y: string; text: string };
@@ -28,6 +28,8 @@ export type Project = {
   color: string;
   glow: string;
   size: "wide" | "narrow" | "full";
+  /** Full-width cards only: put the image on the left instead of the right. */
+  flip?: boolean;
   status: { label: string; tested: boolean };
   card: { line: string; img: string; alt: string; facts: string[]; stats?: { big: string; small: string }[] };
   phone?: { light: string; dark: string; alt: string; line: string };
@@ -573,6 +575,255 @@ export const projects: Project[] = [
         next: [
           "Moderated sessions with about five people who order food delivery at least once a month.",
           "Run the problem flows, like an item running out, to see whether people know what will happen next.",
+          "Fix the worst problems, retest with new people, and update this page.",
+        ],
+      },
+    ],
+    next: "vyra",
+  },
+  {
+    slug: "vyra",
+    name: "VYRA",
+    kind: "Social shopping app",
+    year: "2026",
+    cat: "shopping",
+    color: "#A8322D",
+    glow: "#FF8A85",
+    size: "full",
+    flip: true,
+    status: { label: "Not yet tested with users", tested: false },
+    card: {
+      line: "Shop what creators show you, with a label on every video that says whether they’re paid, and the price and delivery a tap away.",
+      img: "/projects/vyra.webp",
+      alt: "VYRA screens: a product sheet over a video, Maya Okafor’s video in For You labelled Affiliate, and a live shopping room in dark mode",
+      facts: ["Coded prototype", "238 frames in Figma", "Shopper, creator and seller views"],
+    },
+    phone: {
+      light: "/work/vyra/light-feed.webp",
+      dark: "/work/vyra/dark-feed.webp",
+      alt: "VYRA: Maya Okafor’s video in For You, labelled Affiliate, with the tote she’s holding and its price",
+      line: "VYRA: every video says whether the creator is paid, next to what they’re selling.",
+    },
+    liveUrl: "/vyra.html",
+    figmaUrl: "https://www.figma.com/proto/27c1Px9i4Ugv2UdF89pIEY/VYRA?node-id=13-2&starting-point-node-id=13-2&page-id=6%3A6&scaling=scale-down",
+    tryLabel: "Try the app",
+    seo: {
+      title: "VYRA case study",
+      description: "VYRA is a shopping app built around creators’ videos, with a label on every video that says whether the creator is paid. A coded prototype, a design system and a wired Figma prototype by Adam Calliste.",
+    },
+    hero: {
+      lede: "A shopping app built around creators’ videos, that tells you who’s paid, what it costs and what happens when something changes.",
+      meta: [["Role", "Solo, end to end"], ["Platform", "Phone-first web app, with Creator Studio and Seller Centre"], ["Year", "2026"], ["Status", "Not yet tested with users"]],
+      bg: "#A8322D",
+      ink: "#FFFFFF",
+      muted: "#FFDCD6",
+      ctaBg: "#C9B8FF",
+      ctaInk: "#15151B",
+      palette: [
+        { name: "Paper", hex: "#FAF9F7" },
+        { name: "Ink", hex: "#15151B" },
+        { name: "Coral", hex: "#FF615C" },
+        { name: "Lilac", hex: "#9575FF" },
+        { name: "Peach", hex: "#FFF0ED" },
+      ],
+      mosaic: [
+        { src: "/projects/vyra.webp", alt: "VYRA screens: a product sheet over a video, Maya Okafor’s video in For You labelled Affiliate, and a live shopping room in dark mode" },
+        { src: "/work/vyra/light-price.webp", alt: "Checkout: A price changed. Atelier Nord changed Everyday Structured Tote from £34.99 to £36.99, with Accept new price and Review bag" },
+        { src: "/work/vyra/dark-bag.webp", alt: "Your bag in dark mode: 3 items from 3 sellers, each sending its own parcel" },
+      ],
+    },
+    sections: [
+      {
+        type: "notes",
+        id: "problem",
+        nav: "The problem",
+        title: "The problem",
+        paragraphs: [
+          "Buying from a video is quick, but it’s often hard to tell whether the creator is being paid. Delivery costs show up at the end, one bag can hold things from several sellers with different rules, and prices from a live stream can change once it’s over.",
+          "VYRA puts a label on every video, shows the price and delivery dates before the product page, and splits the bag into one parcel per seller. When something changes before you pay, it says what changed and asks first.",
+        ],
+        notes: ["Not knowing if a creator is paid", "Delivery costs that appear at checkout", "One bag, several sellers’ rules", "Prices that change after a live stream"],
+      },
+      {
+        type: "assumptions",
+        id: "assumed",
+        nav: "What I assumed",
+        title: "What I assumed",
+        intro: "No research has run yet, so these are assumptions for testing to prove wrong.",
+        items: [
+          "A label next to the creator’s name, like Affiliate, gets noticed more than a disclosure at the end of the caption.",
+          "Saying the price is the same for you makes an affiliate link feel less like a catch.",
+          "Seeing the price, delivery and options over the video makes people more willing to look, because they don’t lose their place.",
+          "Splitting the bag by seller avoids surprises when parcels arrive on different days.",
+        ],
+      },
+      {
+        type: "annotated",
+        id: "labels",
+        nav: "Labels on the video",
+        title: "Labels on the video",
+        intro: "Every video carries a label next to the creator’s name: Affiliate, Paid partnership, Gifted or Not sponsored. Creators choose it when they post, and shoppers can tap it to see what it means.",
+        steps: [
+          {
+            id: "feed",
+            label: "For You",
+            src: "/work/vyra/light-feed.webp",
+            alt: "For You: Maya Okafor’s video with an Affiliate label next to her name, and the tote she’s holding at £34.99",
+            pins: [
+              { x: "65%", y: "63.4%", text: "The label sits next to the creator’s name, so it’s seen before the caption." },
+              { x: "83%", y: "81.2%", text: "The product and its price are on the video. Tapping it opens a sheet, so you don’t lose your place." },
+            ],
+          },
+          {
+            id: "label",
+            label: "The label",
+            src: "/work/vyra/light-label.webp",
+            alt: "Affiliate link: Maya Okafor earns commission if you buy through this video. The price is the same for you.",
+            pins: [
+              { x: "91%", y: "65%", text: "Tapping the label explains it in one sentence, including whether you pay more." },
+              { x: "90%", y: "72.5%", text: "It also says how labels are checked: tagged products are compared with brand campaigns, and videos that hide a paid relationship are removed." },
+              { x: "91%", y: "91.1%", text: "A missing or wrong label can be reported from the same sheet." },
+            ],
+          },
+          {
+            id: "preview",
+            label: "Shop it",
+            src: "/work/vyra/light-preview.webp",
+            alt: "Featured in this video: Everyday Structured Tote, £34.99, arriving Wed 11 Nov to Fri 13 Nov, with colour and size choices and Add to bag",
+            pins: [
+              { x: "45%", y: "70%", text: "Delivery dates and the free-delivery threshold show before you open the product page." },
+              { x: "70%", y: "71.5%", text: "Colour and size are chosen in the sheet, and Add to bag turns off if that option is sold out." },
+              { x: "93%", y: "88.5%", text: "Add to bag closes the sheet and leaves you on the video, with a link to the bag." },
+            ],
+          },
+          {
+            id: "post",
+            label: "Posting",
+            src: "/work/vyra/light-labelreq.webp",
+            alt: "Creator Studio, Post a video: a tagged tote, and a required Disclosure section with the error Choose a label for the products in this video",
+            pins: [
+              { x: "64%", y: "36.5%", text: "Tagging a product makes the label required." },
+              { x: "58%", y: "68.8%", text: "Not sponsored is one of the choices, so every video still ends up with a label." },
+              { x: "86%", y: "83.5%", text: "Posting without one stops here, with the reason next to the choices." },
+            ],
+          },
+        ],
+      },
+      {
+        type: "annotated",
+        id: "changes",
+        nav: "When something changes",
+        title: "When something changes",
+        intro: "Prices, stock and live streams can all change between adding something and paying for it. Each time, VYRA says what changed and waits for you before you can pay.",
+        steps: [
+          {
+            id: "price",
+            label: "New price",
+            src: "/work/vyra/light-price.webp",
+            alt: "Almost yours: A price changed. Atelier Nord changed Everyday Structured Tote from £34.99 to £36.99, with Accept new price and Review bag, and Place order turned off",
+            pins: [
+              { x: "91%", y: "21.5%", text: "If a seller changes a price while it’s in your bag, checkout names the product and shows the old and new price." },
+              { x: "89%", y: "34.2%", text: "You accept the new price or go back to the bag." },
+              { x: "90%", y: "91.1%", text: "Place order stays off until you’ve accepted it, so you never pay a price you haven’t seen." },
+            ],
+          },
+          {
+            id: "soldout",
+            label: "Sold out",
+            src: "/work/vyra/light-soldout.webp",
+            alt: "Your bag: 1 item needs attention. The black tote is sold out in that option, with Choose another option and Remove, and Continue to checkout turned off",
+            pins: [
+              { x: "93%", y: "28%", text: "If stock runs out after you’ve added something, the bag says so at the top." },
+              { x: "84%", y: "64.8%", text: "The item shows what sold out, with a choice to pick another option or remove it." },
+              { x: "90%", y: "91.1%", text: "Checkout waits until the bag is sorted." },
+            ],
+          },
+          {
+            id: "ended",
+            label: "Stream ends",
+            src: "/work/vyra/light-ended.webp",
+            alt: "This stream has ended. Your bag is saved, and the products below show today’s prices and stock, with Shop 4 products",
+            pins: [
+              { x: "93%", y: "43%", text: "When a stream ends, the room says so and keeps your bag." },
+              { x: "81%", y: "56.3%", text: "You can still buy what was shown, at today’s prices and stock rather than the ones mentioned on stream." },
+            ],
+          },
+        ],
+        note: "Every choice on these screens is a real button you can reach by keyboard, and the price and stock notices are announced to screen readers as alerts.",
+      },
+      {
+        type: "gallery",
+        id: "screens",
+        nav: "Around the app",
+        title: "Around the app",
+        intro: ["A product opens from the video, the bag splits by seller and checkout shows each parcel’s delivery. Star ratings only count verified purchases, a return asks one question at a time, and Your recommendations shows what VYRA uses to pick videos."],
+        shots: [
+          { src: "/work/vyra/light-product.webp", alt: "Everyday Structured Tote from Atelier Nord: £34.99, 4.7 stars from 1,286 verified ratings, colour choices, and an Illustrative photo label", caption: "Product" },
+          { src: "/work/vyra/light-reviews.webp", alt: "What shoppers think: 4.7 from 1,286 verified ratings, and a note that star ratings only count verified purchases", caption: "Reviews" },
+          { src: "/work/vyra/dark-bag.webp", alt: "Your bag in dark mode: 3 items from 3 sellers, each sending its own parcel, with Atelier Nord’s delivery cost and progress to free delivery", caption: "Bag, dark mode" },
+          { src: "/work/vyra/light-checkout.webp", alt: "Almost yours: delivery address and 3 parcels, each with its own delivery choice, and Place order for £93.89", caption: "Checkout" },
+          { src: "/work/vyra/light-reason.webp", alt: "Return, step 2 of 6: what’s wrong, with whether each reason gets a free return and full refund", caption: "Returns" },
+          { src: "/work/vyra/light-recs.webp", alt: "Your recommendations: a switch for personalised For You, what VYRA uses, and that brands can’t pay to appear in For You", caption: "Your recommendations" },
+        ],
+      },
+      {
+        type: "gallery",
+        id: "sides",
+        nav: "Live, creators and sellers",
+        title: "Live, creators and sellers",
+        intro: ["Live rooms pin the product being shown, with its price. Creators post videos and track earnings in Creator Studio, and sellers dispatch orders and run streams in Seller Centre. In the prototype all three share one set of demo data, so ending a stream in Seller Centre ends it for shoppers too."],
+        shots: [
+          { src: "/work/vyra/light-live.webp", alt: "Maya Okafor’s live stream: 1,284 watching, live chat, and the featured Belted Wool-Blend Coat at £89.00 with Shop now", caption: "Live room" },
+          { src: "/work/vyra/light-creator.webp", alt: "Maya Okafor’s profile: 286K followers, Following, Shop collection, and a note that she earns commission on some products", caption: "Creator profile" },
+          { src: "/work/vyra/light-commission.webp", alt: "How creator commission works: a share of the sale if you buy through an affiliate link within 7 days, at the same price, taken back if refunded", caption: "How commission works" },
+          { src: "/work/vyra/light-studio.webp", alt: "Creator Studio dashboard with demo figures: 347K video views, 11K product clicks, 960 eligible purchases and £3,050.72 estimated commission", caption: "Creator Studio" },
+          { src: "/work/vyra/light-sorders.webp", alt: "Seller Centre orders to dispatch within 1 working day, with order number, customer, items and totals", caption: "Seller orders" },
+          { src: "/work/vyra/light-console.webp", alt: "Seller Centre live console: Maya Okafor is hosting Autumn capsule, with End stream and a pinned featured product", caption: "Live console" },
+        ],
+      },
+      {
+        type: "system",
+        id: "system",
+        nav: "Design system",
+        title: "Design system",
+        intro: "Warm paper, ink and one coral for actions, with lilac for labels like Affiliate. Bricolage Grotesque sets the headlines, and Inter handles everything you read or tap.",
+        swatches: [
+          { name: "Paper", hex: "#FAF9F7", ink: "#15151B" },
+          { name: "Ink", hex: "#15151B", ink: "#FFFFFF" },
+          { name: "Coral", hex: "#FF615C", ink: "#15151B" },
+          { name: "Lilac", hex: "#9575FF", ink: "#15151B" },
+          { name: "Peach", hex: "#FFF0ED", ink: "#A3221F" },
+        ],
+        numbers: [
+          { big: "180", small: "Colour variables, in light, dark and wireframe modes" },
+          { big: "177", small: "Components and variants, plus 74 icons" },
+          { big: "61", small: "Text styles" },
+          { big: "238", small: "Frames, from low-fi wireframes to dark mode" },
+        ],
+        specimen: { display: "Bricolage Grotesque", displayUse: "Headlines", body: "Inter", bodyUse: "Everything you read or tap" },
+      },
+      {
+        type: "live",
+        id: "live",
+        nav: "Try it",
+        title: "Try it",
+        intro: "The coded prototype is the same app, running in your browser on demo data. Prototype controls, at the bottom of Profile, switch between the shopper app, Creator Studio and Seller Centre, and let you try edge cases like selling out an item, raising a price or ending Maya’s live stream.",
+        disclaimer: "Demo data only. Videos are still photos standing in for clips, no orders are placed and no payments are taken.",
+      },
+      {
+        type: "checks",
+        id: "checked",
+        nav: "Checks and next steps",
+        title: "What was checked",
+        intro: "Nothing has been tested with users yet. What has been checked is the work itself.",
+        items: [
+          "All 120 text and background colour pairings in the design tokens meet WCAG 2.2 AA contrast, in light and dark.",
+          "An automated axe-core pass over 156 screen states, in light and dark, on phone and desktop, finds no WCAG A or AA issues.",
+          "Taking the screenshots for this page turned up three problems, now fixed: white text on the lilac Affiliate label was below AA contrast, a form error in Creator Studio shifted the whole app up on phones, and disabled buttons let content show through. The label is fixed in Figma too.",
+        ],
+        next: [
+          "Moderated sessions with about five people who buy things they’ve seen in social videos.",
+          "Check whether people notice the label, and can say what Affiliate means before and after tapping it.",
           "Fix the worst problems, retest with new people, and update this page.",
         ],
       },

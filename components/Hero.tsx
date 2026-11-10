@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion, useReducedMotion, useScroll, useSpring, useTransform } from "motion/react";
-import { appProjects } from "@/content/projects";
+import { appProjects, projects } from "@/content/projects";
 import { setAccent } from "@/lib/accent";
 import { ArrowIcon, Magnetic, SplitText } from "./Motion";
 import { site } from "@/content/site";
@@ -285,7 +285,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.35, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
-          <span className="count-tile__pill">5 CASE STUDIES</span>
+          <span className="count-tile__pill">{projects.length} CASE STUDIES</span>
           <span className="count-tile__text">Each one says plainly what was tested with people, and what wasn’t.</span>
           <svg className="count-tile__arrow" width="84" height="84" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" aria-hidden="true">
             <path d="M6 18 18 6M8.5 6H18v9.5" />

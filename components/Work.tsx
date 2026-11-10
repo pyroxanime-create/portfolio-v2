@@ -14,6 +14,7 @@ const FILTERS: { id: Filter; label: string }[] = [
   { id: "all", label: "All" },
   { id: "fintech", label: "Fintech" },
   { id: "food", label: "Food" },
+  { id: "shopping", label: "Shopping" },
   { id: "travel", label: "Travel" },
   { id: "wellbeing", label: "Wellbeing" },
 ];
@@ -26,7 +27,7 @@ function Card({ p }: { p: Project }) {
   return (
     <motion.article
       layout={!reduce}
-      className={`tile card card--${p.size}`}
+      className={`tile card card--${p.size}${p.flip ? " card--flip" : ""}`}
       initial={reduce ? false : { opacity: 0, scale: 0.97 }}
       animate={{ opacity: 1, scale: 1 }}
       exit={reduce ? undefined : { opacity: 0, scale: 0.97 }}

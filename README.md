@@ -17,7 +17,7 @@ npm run typecheck
 
 - `content/site.ts` — name, status, contact links and photo. Email, LinkedIn and photo are empty until you fill them in; anything left empty is hidden on the site.
 - `content/projects.ts` — every project card and case study, in display order.
-- `public/` — screenshots and the working prototypes (`/atlas/`, `kivo.html`, `daymark.html`, `global.html`).
+- `public/` — screenshots and the working prototypes (`leeway.html`, `pare.html`, `munchy.html`, `show-and-tell.html`, `daymark.html`, `global.html`, `global-plus.html`).
 - `components/DotField.tsx` — the interactive background.
 - `components/AnnotateCursor.tsx` — the selection box that follows the pointer (mouse only).
 

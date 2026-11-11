@@ -199,7 +199,7 @@ export default function Hero() {
                     transition={reduce ? { duration: 0 } : { type: "spring", stiffness: 170, damping: 22, mass: 0.9 }}
                     onClick={isFront ? undefined : () => pick(i)}
                     aria-hidden={!isFront}
-                    data-annotate={isFront ? undefined : `Show ${p.name}`}
+                    data-annotate={isFront ? undefined : `See ${p.name}`}
                   >
                     <div className="phone__screen">
                       {isFront && live && p.liveUrl ? (
@@ -252,7 +252,7 @@ export default function Hero() {
                 onClick={() => pick(i)}
                 onPointerEnter={() => setAccent({ light: p.color, dark: p.glow })}
                 onPointerLeave={() => setAccent(null)}
-                data-annotate={`Show ${p.name}`}
+                data-annotate={`See ${p.name}`}
               >
                 {i === sel ? <motion.span layoutId="app-bg" className="chip__bg" transition={{ type: "spring", stiffness: 420, damping: 34 }} /> : null}
                 <span className="app-dot" style={{ background: p.color }} aria-hidden="true" />

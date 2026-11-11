@@ -318,7 +318,13 @@ export default function CaseStudy({ p }: { p: Project }) {
         </div>
         <h1 id="cs-title" className="display cs-title">
           <span className="sr-only">{p.name}</span>
-          <SplitText text={p.name} delay={0.1} stagger={0.05} />
+          {/* Each word animates on its own, with a real space between them so a two-word name can wrap instead of running off the edge. */}
+          {p.name.split(" ").map((word, i, words) => (
+            <span key={word + i}>
+              {i > 0 ? " " : null}
+              <SplitText text={word} delay={0.1 + words.slice(0, i).join("").length * 0.05} stagger={0.05} />
+            </span>
+          ))}
         </h1>
         <div className="cs-hero__bottom">
           <p className="lede">{p.hero.lede}</p>

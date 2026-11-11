@@ -6,9 +6,9 @@ import { Reveal } from "./Motion";
 
 const NOTES = [
   { title: "Clarity beats cleverness.", body: "DAYMARK shows the working behind every estimate, so a number never appears from nowhere.", from: "From DAYMARK", bg: "bg-butter", tilt: -1.2 },
-  { title: "Small interactions shape trust.", body: "In ATLAS, moving a stop shows its effect before you let go, and Undo reverses exactly that change.", from: "From ATLAS", bg: "bg-mint", tilt: 0.9 },
+  { title: "Small interactions shape trust.", body: "In Leeway, moving a stop shows its effect before you let go, and Undo reverses exactly that change.", from: "From Leeway", bg: "bg-mint", tilt: 0.9 },
   { title: "Emotion guides attention.", body: "MindSpace starts by asking how you feel, then offers the game made for that feeling.", from: "From MindSpace", bg: "bg-rose", tilt: -0.7 },
-  { title: "Accessibility isn’t extra.", body: "ATLAS and KIVO check every text colour against WCAG 2.2 AA, in light and dark.", from: "From ATLAS and KIVO", bg: "bg-lilac", tilt: 1.1 },
+  { title: "Accessibility isn’t extra.", body: "Leeway and Pare check every text colour against WCAG 2.2 AA, in light and dark.", from: "From Leeway and Pare", bg: "bg-lilac", tilt: 1.1 },
 ];
 
 export default function HowIWork() {

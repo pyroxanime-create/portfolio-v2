@@ -54,8 +54,8 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "atlas",
-    name: "ATLAS",
+    slug: "leeway",
+    name: "Leeway",
     kind: "Travel planning app",
     year: "2026",
     cat: "travel",
@@ -65,22 +65,22 @@ export const projects: Project[] = [
     status: { label: "Not yet tested with users", tested: false },
     card: {
       line: "Plan a trip, reshape each day by dragging stops and see the new times before you let go.",
-      img: "/projects/atlas.webp",
-      alt: "ATLAS screens: Explore, a stop being dragged in day 2, and Today in Tokyo",
+      img: "/projects/leeway.webp",
+      alt: "Leeway screens: Explore, a stop being dragged in day 2, and Today in Tokyo",
       facts: ["Coded prototype", "123 screens in Figma"],
     },
     phone: {
-      light: "/work/atlas/light-drag.webp",
-      dark: "/work/atlas/dark-drag.webp",
-      alt: "ATLAS: a stop being dragged in day 2, showing its new start time",
-      line: "ATLAS: drag a stop and see its new start time before you let go.",
+      light: "/work/leeway/light-drag.webp",
+      dark: "/work/leeway/dark-drag.webp",
+      alt: "Leeway: a stop being dragged in day 2, showing its new start time",
+      line: "Leeway: drag a stop and see its new start time before you let go.",
     },
-    liveUrl: "/atlas.html",
-    figmaUrl: "https://www.figma.com/proto/zSLpBSIlO67JMKtTmlyadM/ATLAS?node-id=54-2&starting-point-node-id=54-2&page-id=1%3A6&scaling=scale-down",
+    liveUrl: "/leeway.html",
+    figmaUrl: "https://www.figma.com/proto/zSLpBSIlO67JMKtTmlyadM/Leeway?node-id=54-2&starting-point-node-id=54-2&page-id=1%3A6&scaling=scale-down",
     tryLabel: "Try the app",
     seo: {
-      title: "ATLAS case study",
-      description: "ATLAS is a travel planner that keeps the whole trip in one place, and is honest about what it can’t know. A coded prototype, a design system and a wired Figma prototype by Adam Calliste.",
+      title: "Leeway case study",
+      description: "Leeway is a travel planner that keeps the whole trip in one place, and is honest about what it can’t know. A coded prototype, a design system and a wired Figma prototype by Adam Calliste.",
     },
     hero: {
       lede: "A travel planner that keeps the whole trip in one place, and is honest about what it can’t know.",
@@ -98,9 +98,9 @@ export const projects: Project[] = [
         { name: "Coral", hex: "#F28C75" },
       ],
       mosaic: [
-        { src: "/projects/atlas.webp", alt: "ATLAS screens: Explore, a stop being dragged in day 2, and Today in Tokyo in dark mode" },
-        { src: "/work/atlas/light-map.webp", alt: "The day 2 map with numbered stops joined in visiting order" },
-        { src: "/work/atlas/light-today.webp", alt: "Today in Tokyo during the trip, with Meiji Jingu up next in 50 minutes" },
+        { src: "/projects/leeway.webp", alt: "Leeway screens: Explore, a stop being dragged in day 2, and Today in Tokyo in dark mode" },
+        { src: "/work/leeway/light-map.webp", alt: "The day 2 map with numbered stops joined in visiting order" },
+        { src: "/work/leeway/light-today.webp", alt: "Today in Tokyo during the trip, with Meiji Jingu up next in 50 minutes" },
       ],
     },
     sections: [
@@ -111,7 +111,7 @@ export const projects: Project[] = [
         title: "The problem",
         paragraphs: [
           "A trip lives in too many places, plans change on the way, and when something goes wrong, like a cancelled flight, it’s hard to see what it affects.",
-          "ATLAS holds the whole trip in one place and makes change feel safe: it shows what a change will do before you make it, and lets you undo it.",
+          "Leeway holds the whole trip in one place and makes change feel safe: it shows what a change will do before you make it, and lets you undo it.",
         ],
         notes: ["Bookings in email", "Ideas in screenshots", "The plan in a spreadsheet", "Costs in a group chat"],
       },
@@ -138,7 +138,7 @@ export const projects: Project[] = [
           {
             id: "drag",
             label: "While dragging",
-            src: "/work/atlas/light-drag.webp",
+            src: "/work/leeway/light-drag.webp",
             alt: "A stop mid-drag in day 2, labelled Starts 10:05 AM, check timing, with a striped gap where it was",
             pins: [
               { x: "85%", y: "26%", text: "The new start time, and a warning to check timing, show before you let go." },
@@ -149,7 +149,7 @@ export const projects: Project[] = [
           {
             id: "drop",
             label: "After the drop",
-            src: "/work/atlas/light-dropped.webp",
+            src: "/work/leeway/light-dropped.webp",
             alt: "After the drop: a message says Ramen lunch now starts at 10:05 AM, travel 4 minutes less, opens at 11:00 AM, with Undo",
             pins: [
               { x: "60%", y: "52%", text: "Problems are explained in words on the card, not only in colour." },
@@ -166,12 +166,12 @@ export const projects: Project[] = [
         title: "Around the trip",
         intro: ["Explore leads to a destination, a destination to a trip, and a trip opens on its itinerary, with the map, bookings, budget and people one tab away. During the trip, Today leads."],
         shots: [
-          { src: "/work/atlas/light-explore.webp", alt: "Explore: Good morning, Alex, with search and the Tokyo Escape trip coming up in 173 days", caption: "Explore" },
-          { src: "/work/atlas/light-trip.webp", alt: "Tokyo Escape, 13–19 April 2027: 173 days to go, £1,420 of £2,000, 3 people and 1 thing to check", caption: "Trip overview" },
-          { src: "/work/atlas/light-itinerary.webp", alt: "Day 2, Wednesday 14 April: a route map, 9 stops and a timeline starting with landing at Haneda at 7:15 AM", caption: "Itinerary" },
-          { src: "/work/atlas/light-budget.webp", alt: "Budget: your share is £1,420 of £2,000, split into paid, confirmed, estimated and refunded, with settle up", caption: "Budget" },
-          { src: "/work/atlas/light-people.webp", alt: "People on the trip: Alex as owner, Sam who can edit, Mia who can view, and a pending invite", caption: "People and roles" },
-          { src: "/work/atlas/dark-today.webp", alt: "Today in Tokyo in dark mode, with Meiji Jingu up next", caption: "Today, dark mode" },
+          { src: "/work/leeway/light-explore.webp", alt: "Explore: Good morning, Alex, with search and the Tokyo Escape trip coming up in 173 days", caption: "Explore" },
+          { src: "/work/leeway/light-trip.webp", alt: "Tokyo Escape, 13–19 April 2027: 173 days to go, £1,420 of £2,000, 3 people and 1 thing to check", caption: "Trip overview" },
+          { src: "/work/leeway/light-itinerary.webp", alt: "Day 2, Wednesday 14 April: a route map, 9 stops and a timeline starting with landing at Haneda at 7:15 AM", caption: "Itinerary" },
+          { src: "/work/leeway/light-budget.webp", alt: "Budget: your share is £1,420 of £2,000, split into paid, confirmed, estimated and refunded, with settle up", caption: "Budget" },
+          { src: "/work/leeway/light-people.webp", alt: "People on the trip: Alex as owner, Sam who can edit, Mia who can view, and a pending invite", caption: "People and roles" },
+          { src: "/work/leeway/dark-today.webp", alt: "Today in Tokyo in dark mode, with Meiji Jingu up next", caption: "Today, dark mode" },
         ],
       },
       {
@@ -221,11 +221,11 @@ export const projects: Project[] = [
         ],
       },
     ],
-    next: "kivo",
+    next: "pare",
   },
   {
-    slug: "kivo",
-    name: "KIVO",
+    slug: "pare",
+    name: "Pare",
     kind: "Subscription manager",
     year: "2026",
     cat: "fintech",
@@ -235,22 +235,22 @@ export const projects: Project[] = [
     status: { label: "Not yet tested with users", tested: false },
     card: {
       line: "See every subscription and what’s due next, with guided cancelling that never pretends to cancel for you.",
-      img: "/projects/kivo.png",
-      alt: "KIVO screens: subscriptions, Home with £101.82 a month, and spending by category",
+      img: "/projects/pare.png",
+      alt: "Pare screens: subscriptions, Home with £101.82 a month, and spending by category",
       facts: ["Coded prototype", "237 frames in Figma"],
     },
     phone: {
-      light: "/work/kivo/light-home.png",
-      dark: "/work/kivo/dark-home.png",
-      alt: "KIVO Home: £101.82 a month across 11 subscriptions",
-      line: "KIVO: every subscription, what it costs and what’s due next.",
+      light: "/work/pare/light-home.png",
+      dark: "/work/pare/dark-home.png",
+      alt: "Pare Home: £101.82 a month across 11 subscriptions",
+      line: "Pare: every subscription, what it costs and what’s due next.",
     },
-    liveUrl: "/kivo.html",
-    figmaUrl: "https://www.figma.com/proto/QVzt4ygQoITrjWHEIAM5Sq/KIVO?node-id=14-2&starting-point-node-id=14-2&page-id=2%3A2&scaling=scale-down",
+    liveUrl: "/pare.html",
+    figmaUrl: "https://www.figma.com/proto/QVzt4ygQoITrjWHEIAM5Sq/Pare?node-id=14-2&starting-point-node-id=14-2&page-id=2%3A2&scaling=scale-down",
     tryLabel: "Try the app",
     seo: {
-      title: "KIVO case study",
-      description: "KIVO is a subscription manager that shows what you pay, what’s coming next and how to cancel, without pretending it can cancel for you. A coded prototype and a wired Figma prototype by Adam Calliste.",
+      title: "Pare case study",
+      description: "Pare is a subscription manager that shows what you pay, what’s coming next and how to cancel, without pretending it can cancel for you. A coded prototype and a wired Figma prototype by Adam Calliste.",
     },
     hero: {
       lede: "A subscription manager that shows what you pay, what’s coming next and how to cancel, without pretending it can cancel for you.",
@@ -267,9 +267,9 @@ export const projects: Project[] = [
         { name: "Mist", hex: "#F5F3FF" },
       ],
       mosaic: [
-        { src: "/projects/kivo.png", alt: "Three KIVO screens: the subscriptions list, Home with £101.82 a month across 11 active subscriptions, and spending by category in dark mode" },
-        { src: "/work/kivo/light-timeline.png", alt: "Coming up next: £204.57 expected in the next 30 days" },
-        { src: "/work/kivo/light-insights.png", alt: "Subscription spending: £1,221.83 a year across 8 categories" },
+        { src: "/projects/pare.png", alt: "Three Pare screens: the subscriptions list, Home with £101.82 a month across 11 active subscriptions, and spending by category in dark mode" },
+        { src: "/work/pare/light-timeline.png", alt: "Coming up next: £204.57 expected in the next 30 days" },
+        { src: "/work/pare/light-insights.png", alt: "Subscription spending: £1,221.83 a year across 8 categories" },
       ],
     },
     sections: [
@@ -280,7 +280,7 @@ export const projects: Project[] = [
         title: "The problem",
         paragraphs: [
           "Subscriptions are easy to start and easy to lose track of. They charge on different days, on different cards and sometimes in different currencies, and cancelling happens somewhere else, often several screens deep in another app.",
-          "KIVO gives one honest picture of what you pay and what’s coming, and helps you act on it. It’s clear about what it can’t see or do: it can’t see how much you use a service, it can’t cancel for you, and an expected charge is not a confirmed one.",
+          "Pare gives one honest picture of what you pay and what’s coming, and helps you act on it. It’s clear about what it can’t see or do: it can’t see how much you use a service, it can’t cancel for you, and an expected charge is not a confirmed one.",
         ],
         notes: ["Charges on different days", "Trials that turn into paid plans", "Prices that creep up", "Cancelling in another app"],
       },
@@ -295,7 +295,7 @@ export const projects: Project[] = [
           "A countdown with the expected first charge gets people to deal with a free trial before it turns into a paid plan.",
           "Step-by-step guidance that saves progress helps people finish cancelling with the provider.",
           "Keeping expected charges visibly apart from recorded ones makes the calendar easier to trust.",
-          "People trust detection more when KIVO asks before adding anything it found.",
+          "People trust detection more when Pare asks before adding anything it found.",
           "A what-if scenario helps people decide what to keep without feeling pushed either way.",
         ],
       },
@@ -305,9 +305,9 @@ export const projects: Project[] = [
         nav: "Principles",
         title: "Principles",
         items: [
-          "KIVO never claims to cancel anything. It shows where and how, keeps your progress, and only marks a subscription as cancelled when you confirm it.",
+          "Pare never claims to cancel anything. It shows where and how, keeps your progress, and only marks a subscription as cancelled when you confirm it.",
           "Recorded and expected stay apart. Expected charges and estimates are labelled, and plans that vary show an average with a “~”.",
-          "No invented links. If KIVO hasn’t checked a provider’s account page, it says so and gives general steps instead of guessing a link.",
+          "No invented links. If Pare hasn’t checked a provider’s account page, it says so and gives general steps instead of guessing a link.",
           "Ask before acting. Detected subscriptions and possible duplicates wait for your decision, because detection can be wrong.",
           "Scenarios, not promises. The what-if calculator is labelled as a scenario, and for shared plans it shows your own share separately.",
           "Accessible by default: every chart has a text version, colour is never the only cue, and text size and reduced motion are settings.",
@@ -320,12 +320,12 @@ export const projects: Project[] = [
         title: "Key screens",
         intro: ["Home leads with the monthly total and anything that needs attention. Every subscription has the same detail page, and every one can be cancelled with the same guided steps."],
         shots: [
-          { src: "/work/kivo/light-home.png", alt: "Home: £101.82 a month across 11 active subscriptions, a free trial ending in 3 days and items that need attention", caption: "Home" },
-          { src: "/work/kivo/light-subs.png", alt: "Your subscriptions: 11 active, 2 trials and 1 cancelled, with search and filters", caption: "Subscriptions" },
-          { src: "/work/kivo/light-detail.png", alt: "Netflix Standard at £12.99 a month, next payment Saturday 24 October, with billing details", caption: "Subscription detail" },
-          { src: "/work/kivo/light-trials.png", alt: "Your free trials: Figma Professional with 3 days remaining and an expected charge of £15.00 on 17 October", caption: "Free trials" },
-          { src: "/work/kivo/light-cancel.png", alt: "Manage cancellation for Stillwater: cancellation started but not confirmed", caption: "Guided cancellation" },
-          { src: "/work/kivo/light-calendar.png", alt: "Your payment calendar for October 2026, with £100.05 expected", caption: "Payment calendar" },
+          { src: "/work/pare/light-home.png", alt: "Home: £101.82 a month across 11 active subscriptions, a free trial ending in 3 days and items that need attention", caption: "Home" },
+          { src: "/work/pare/light-subs.png", alt: "Your subscriptions: 11 active, 2 trials and 1 cancelled, with search and filters", caption: "Subscriptions" },
+          { src: "/work/pare/light-detail.png", alt: "Netflix Standard at £12.99 a month, next payment Saturday 24 October, with billing details", caption: "Subscription detail" },
+          { src: "/work/pare/light-trials.png", alt: "Your free trials: Figma Professional with 3 days remaining and an expected charge of £15.00 on 17 October", caption: "Free trials" },
+          { src: "/work/pare/light-cancel.png", alt: "Manage cancellation for Stillwater: cancellation started but not confirmed", caption: "Guided cancellation" },
+          { src: "/work/pare/light-calendar.png", alt: "Your payment calendar for October 2026, with £100.05 expected", caption: "Payment calendar" },
         ],
       },
       {
@@ -349,12 +349,12 @@ export const projects: Project[] = [
         title: "The final experience",
         intro: ["237 frames in Figma: 154 screen states, 68 sheets and 15 dialogs, each in light and dark. The Figma prototype wires about 1,900 interactions, from tabs and back buttons to sheets, dialogs and switches."],
         shots: [
-          { src: "/work/kivo/light-timeline.png", alt: "Coming up next: £204.57 expected in the next 30 days, with a notice about a large annual payment", caption: "Coming up next" },
-          { src: "/work/kivo/light-trends.png", alt: "How your costs change: monthly commitments over time, recorded and expected", caption: "Cost trends" },
-          { src: "/work/kivo/light-whatif.png", alt: "What if you cancelled: pick subscriptions to see how recurring costs would change, labelled as a scenario", caption: "What-if calculator" },
-          { src: "/work/kivo/light-shared.png", alt: "Shared plans: Household Streaming with £4.33 outstanding and Family Cloud all paid", caption: "Shared plans" },
-          { src: "/work/kivo/light-review.png", alt: "Your monthly review: 13 subscriptions to look at, about 3 minutes", caption: "Monthly review" },
-          { src: "/work/kivo/dark-cancel.png", alt: "Guided cancellation in dark mode", caption: "Cancellation, dark mode" },
+          { src: "/work/pare/light-timeline.png", alt: "Coming up next: £204.57 expected in the next 30 days, with a notice about a large annual payment", caption: "Coming up next" },
+          { src: "/work/pare/light-trends.png", alt: "How your costs change: monthly commitments over time, recorded and expected", caption: "Cost trends" },
+          { src: "/work/pare/light-whatif.png", alt: "What if you cancelled: pick subscriptions to see how recurring costs would change, labelled as a scenario", caption: "What-if calculator" },
+          { src: "/work/pare/light-shared.png", alt: "Shared plans: Household Streaming with £4.33 outstanding and Family Cloud all paid", caption: "Shared plans" },
+          { src: "/work/pare/light-review.png", alt: "Your monthly review: 13 subscriptions to look at, about 3 minutes", caption: "Monthly review" },
+          { src: "/work/pare/dark-cancel.png", alt: "Guided cancellation in dark mode", caption: "Cancellation, dark mode" },
         ],
       },
       {
@@ -383,11 +383,11 @@ export const projects: Project[] = [
         ],
       },
     ],
-    next: "savora",
+    next: "munchy",
   },
   {
-    slug: "savora",
-    name: "SAVORA",
+    slug: "munchy",
+    name: "Munchy",
     kind: "Food delivery app",
     year: "2026",
     cat: "food",
@@ -397,22 +397,22 @@ export const projects: Project[] = [
     status: { label: "Not yet tested with users", tested: false },
     card: {
       line: "Order dinner with the full cost shown before checkout, an arrival window instead of a guess, and clear choices when something goes wrong.",
-      img: "/projects/savora.webp",
-      alt: "SAVORA screens: Home, Luna Trattoria’s restaurant page, and live tracking in dark mode",
+      img: "/projects/munchy.webp",
+      alt: "Munchy screens: Home, Luna Trattoria’s restaurant page, and live tracking in dark mode",
       facts: ["Coded prototype", "133 frames in Figma", "Customer, restaurant and courier apps"],
     },
     phone: {
-      light: "/work/savora/light-restaurant.webp",
-      dark: "/work/savora/dark-restaurant.webp",
-      alt: "SAVORA: Luna Trattoria’s page, with delivery time, fee, minimum order and distance above the menu",
-      line: "SAVORA: delivery time, fee and minimum order, before you open the menu.",
+      light: "/work/munchy/light-restaurant.webp",
+      dark: "/work/munchy/dark-restaurant.webp",
+      alt: "Munchy: Luna Trattoria’s page, with delivery time, fee, minimum order and distance above the menu",
+      line: "Munchy: delivery time, fee and minimum order, before you open the menu.",
     },
-    liveUrl: "/savora.html",
-    figmaUrl: "https://www.figma.com/proto/FF7MyXtUspCrVBldsUfd6H/SAVORA?node-id=18-401&starting-point-node-id=18-401&page-id=3%3A101&scaling=scale-down",
+    liveUrl: "/munchy.html",
+    figmaUrl: "https://www.figma.com/proto/FF7MyXtUspCrVBldsUfd6H/Munchy?node-id=18-401&starting-point-node-id=18-401&page-id=3%3A101&scaling=scale-down",
     tryLabel: "Try the app",
     seo: {
-      title: "SAVORA case study",
-      description: "SAVORA is a food delivery app that’s upfront about what you’ll pay, when it’ll arrive and what happens when something goes wrong. A coded prototype, a design system and a wired Figma prototype by Adam Calliste.",
+      title: "Munchy case study",
+      description: "Munchy is a food delivery app that’s upfront about what you’ll pay, when it’ll arrive and what happens when something goes wrong. A coded prototype, a design system and a wired Figma prototype by Adam Calliste.",
     },
     hero: {
       lede: "A food delivery app that’s upfront about what you’ll pay, when it’ll arrive and what happens when something goes wrong.",
@@ -430,9 +430,9 @@ export const projects: Project[] = [
         { name: "Peach", hex: "#FFEBE4" },
       ],
       mosaic: [
-        { src: "/projects/savora.webp", alt: "SAVORA screens: Home, Luna Trattoria’s restaurant page, and live tracking in dark mode" },
-        { src: "/work/savora/light-track.webp", alt: "Live tracking: the courier on an illustrated map, and Alex is on the way" },
-        { src: "/work/savora/dark-home.webp", alt: "Home in dark mode: What are you craving today?, with search and delivery or pickup" },
+        { src: "/projects/munchy.webp", alt: "Munchy screens: Home, Luna Trattoria’s restaurant page, and live tracking in dark mode" },
+        { src: "/work/munchy/light-track.webp", alt: "Live tracking: the courier on an illustrated map, and Alex is on the way" },
+        { src: "/work/munchy/dark-home.webp", alt: "Home in dark mode: What are you craving today?, with search and delivery or pickup" },
       ],
     },
     sections: [
@@ -443,7 +443,7 @@ export const projects: Project[] = [
         title: "The problem",
         paragraphs: [
           "Ordering food is quick until something changes. Fees appear late, arrival times slip without a reason, and when a dish runs out or no courier is free, the app often goes quiet.",
-          "SAVORA shows the full cost before checkout and gives arrival as a window. When something goes wrong, it says what happened, whether you’ve been charged and what you can do next.",
+          "Munchy shows the full cost before checkout and gives arrival as a window. When something goes wrong, it says what happened, whether you’ve been charged and what you can do next.",
         ],
         notes: ["A fee you only see at checkout", "An arrival time that keeps moving", "Suggestions you can’t question", "Silence when a dish runs out"],
       },
@@ -470,7 +470,7 @@ export const projects: Project[] = [
           {
             id: "track",
             label: "On the way",
-            src: "/work/savora/light-track.webp",
+            src: "/work/munchy/light-track.webp",
             alt: "Tracking: Alex is on the way, with an estimated arrival of 7:05–7:20 PM, about 7 minutes",
             pins: [
               { x: "88%", y: "90%", text: "Arrival is a window, with the minutes left underneath, instead of one time that keeps moving." },
@@ -481,7 +481,7 @@ export const projects: Project[] = [
           {
             id: "item",
             label: "An item runs out",
-            src: "/work/savora/light-itemout.webp",
+            src: "/work/munchy/light-itemout.webp",
             alt: "Luna Trattoria has run out of Burrata & heritage tomatoes, with Refund £9.50 for it and Cancel the whole order",
             pins: [
               { x: "92%", y: "60%", text: "It names what ran out and what happens if you don’t answer: in 4 minutes the item is refunded and the rest of the order carries on." },
@@ -492,7 +492,7 @@ export const projects: Project[] = [
           {
             id: "courier",
             label: "No courier",
-            src: "/work/savora/light-nocourier.webp",
+            src: "/work/munchy/light-nocourier.webp",
             alt: "Finding your courier: estimated arrival to be confirmed, with Keep waiting, Collect it myself and Cancel for a full refund",
             pins: [
               { x: "82%", y: "49%", text: "With no courier yet, arrival says To be confirmed instead of guessing." },
@@ -509,12 +509,12 @@ export const projects: Project[] = [
         title: "Around the app",
         intro: ["Home leads to a restaurant, a restaurant to a dish, and the basket to checkout. Costs, allergens and choices are shown where you make them, not saved for the last step."],
         shots: [
-          { src: "/work/savora/light-home.webp", alt: "Home: What are you craving today?, with search, delivery or pickup, cuisines and a £5 promo code", caption: "Home" },
-          { src: "/work/savora/light-restaurant.webp", alt: "Luna Trattoria: 25–40 min delivery, £2.49 delivery fee, £12 minimum order, 950 m away, and free delivery over £25", caption: "Restaurant" },
-          { src: "/work/savora/light-dish-choice.webp", alt: "Chicken katsu curry: allergens listed, a required rice choice, and extras that each name their allergens", caption: "Required choices" },
-          { src: "/work/savora/light-fee.webp", alt: "About the service fee: 8% of your food subtotal, at least £0.50 and never more than £2.99", caption: "About the service fee" },
-          { src: "/work/savora/light-checkout.webp", alt: "Checkout: address with delivery instructions, arriving in 25–40 min, Visa ending 4242 and a phone number for problems", caption: "Checkout" },
-          { src: "/work/savora/light-why.webp", alt: "Why you’re seeing this: you said you like Italian food and rated Luna Trattoria highly, and For you has no sponsored placements", caption: "Why you’re seeing this" },
+          { src: "/work/munchy/light-home.webp", alt: "Home: What are you craving today?, with search, delivery or pickup, cuisines and a £5 promo code", caption: "Home" },
+          { src: "/work/munchy/light-restaurant.webp", alt: "Luna Trattoria: 25–40 min delivery, £2.49 delivery fee, £12 minimum order, 950 m away, and free delivery over £25", caption: "Restaurant" },
+          { src: "/work/munchy/light-dish-choice.webp", alt: "Chicken katsu curry: allergens listed, a required rice choice, and extras that each name their allergens", caption: "Required choices" },
+          { src: "/work/munchy/light-fee.webp", alt: "About the service fee: 8% of your food subtotal, at least £0.50 and never more than £2.99", caption: "About the service fee" },
+          { src: "/work/munchy/light-checkout.webp", alt: "Checkout: address with delivery instructions, arriving in 25–40 min, Visa ending 4242 and a phone number for problems", caption: "Checkout" },
+          { src: "/work/munchy/light-why.webp", alt: "Why you’re seeing this: you said you like Italian food and rated Luna Trattoria highly, and For you has no sponsored placements", caption: "Why you’re seeing this" },
         ],
       },
       {
@@ -524,12 +524,12 @@ export const projects: Project[] = [
         title: "Three apps, one order",
         intro: ["Customers order and track, the restaurant portal accepts and cooks on desktop, and the courier app takes the delivery. In the prototype all three share one simulated order, so you can play any part, from placing it to handing it over."],
         shots: [
-          { src: "/work/savora/light-confirmed.webp", alt: "Order sent: your order is on its way to the kitchen, arriving 7:05–7:20 PM, £35.64 paid", caption: "Order sent" },
-          { src: "/work/savora/light-courier-offer.webp", alt: "Courier app: a £4.23 delivery offer from Luna Trattoria, 950 m from the customer, with 3:00 left to respond", caption: "Courier: new offer" },
-          { src: "/work/savora/dark-track.webp", alt: "Tracking in dark mode: Alex is on the way, arriving 7:05–7:20 PM", caption: "Tracking, dark mode" },
-          { src: "/work/savora/light-delivered.webp", alt: "Delivered at 7:07 PM by Alex, within the estimate, with a rating and an optional tip", caption: "Delivered" },
-          { src: "/work/savora/light-courier-earn.webp", alt: "Courier app earnings: £10.10 today from 2 deliveries, paid weekly, and couriers keep 100% of tips", caption: "Courier: earnings" },
-          { src: "/work/savora/light-controls.webp", alt: "Prototype controls: switch between the customer app, restaurant portal and courier app, and set the demo clock", caption: "Prototype controls" },
+          { src: "/work/munchy/light-confirmed.webp", alt: "Order sent: your order is on its way to the kitchen, arriving 7:05–7:20 PM, £35.64 paid", caption: "Order sent" },
+          { src: "/work/munchy/light-courier-offer.webp", alt: "Courier app: a £4.23 delivery offer from Luna Trattoria, 950 m from the customer, with 3:00 left to respond", caption: "Courier: new offer" },
+          { src: "/work/munchy/dark-track.webp", alt: "Tracking in dark mode: Alex is on the way, arriving 7:05–7:20 PM", caption: "Tracking, dark mode" },
+          { src: "/work/munchy/light-delivered.webp", alt: "Delivered at 7:07 PM by Alex, within the estimate, with a rating and an optional tip", caption: "Delivered" },
+          { src: "/work/munchy/light-courier-earn.webp", alt: "Courier app earnings: £10.10 today from 2 deliveries, paid weekly, and couriers keep 100% of tips", caption: "Courier: earnings" },
+          { src: "/work/munchy/light-controls.webp", alt: "Prototype controls: switch between the customer app, restaurant portal and courier app, and set the demo clock", caption: "Prototype controls" },
         ],
       },
       {
@@ -579,11 +579,11 @@ export const projects: Project[] = [
         ],
       },
     ],
-    next: "vyra",
+    next: "show-and-tell",
   },
   {
-    slug: "vyra",
-    name: "VYRA",
+    slug: "show-and-tell",
+    name: "Show &\u00a0Tell",
     kind: "Social shopping app",
     year: "2026",
     cat: "shopping",
@@ -594,22 +594,22 @@ export const projects: Project[] = [
     status: { label: "Not yet tested with users", tested: false },
     card: {
       line: "Shop what creators show you, with a label on every video that says whether they’re paid, and the price and delivery a tap away.",
-      img: "/projects/vyra.webp",
-      alt: "VYRA screens: a product sheet over a video, Maya Okafor’s video in For You labelled Affiliate, and a live shopping room in dark mode",
+      img: "/projects/show-and-tell.webp",
+      alt: "Show & Tell screens: a product sheet over a video, Maya Okafor’s video in For You labelled Affiliate, and a live shopping room in dark mode",
       facts: ["Coded prototype", "238 frames in Figma", "Shopper, creator and seller views"],
     },
     phone: {
-      light: "/work/vyra/light-feed.webp",
-      dark: "/work/vyra/dark-feed.webp",
-      alt: "VYRA: Maya Okafor’s video in For You, labelled Affiliate, with the tote she’s holding and its price",
-      line: "VYRA: every video says whether the creator is paid, next to what they’re selling.",
+      light: "/work/show-and-tell/light-feed.webp",
+      dark: "/work/show-and-tell/dark-feed.webp",
+      alt: "Show & Tell: Maya Okafor’s video in For You, labelled Affiliate, with the tote she’s holding and its price",
+      line: "Show & Tell: every video says whether the creator is paid, next to what they’re selling.",
     },
-    liveUrl: "/vyra.html",
-    figmaUrl: "https://www.figma.com/proto/27c1Px9i4Ugv2UdF89pIEY/VYRA?node-id=13-2&starting-point-node-id=13-2&page-id=6%3A6&scaling=scale-down",
+    liveUrl: "/show-and-tell.html",
+    figmaUrl: "https://www.figma.com/proto/27c1Px9i4Ugv2UdF89pIEY/Show-and-Tell?node-id=13-2&starting-point-node-id=13-2&page-id=6%3A6&scaling=scale-down",
     tryLabel: "Try the app",
     seo: {
-      title: "VYRA case study",
-      description: "VYRA is a shopping app built around creators’ videos, with a label on every video that says whether the creator is paid. A coded prototype, a design system and a wired Figma prototype by Adam Calliste.",
+      title: "Show & Tell case study",
+      description: "Show & Tell is a shopping app built around creators’ videos, with a label on every video that says whether the creator is paid. A coded prototype, a design system and a wired Figma prototype by Adam Calliste.",
     },
     hero: {
       lede: "A shopping app built around creators’ videos, that tells you who’s paid, what it costs and what happens when something changes.",
@@ -627,9 +627,9 @@ export const projects: Project[] = [
         { name: "Peach", hex: "#FFF0ED" },
       ],
       mosaic: [
-        { src: "/projects/vyra.webp", alt: "VYRA screens: a product sheet over a video, Maya Okafor’s video in For You labelled Affiliate, and a live shopping room in dark mode" },
-        { src: "/work/vyra/light-price.webp", alt: "Checkout: A price changed. Atelier Nord changed Everyday Structured Tote from £34.99 to £36.99, with Accept new price and Review bag" },
-        { src: "/work/vyra/dark-bag.webp", alt: "Your bag in dark mode: 3 items from 3 sellers, each sending its own parcel" },
+        { src: "/projects/show-and-tell.webp", alt: "Show & Tell screens: a product sheet over a video, Maya Okafor’s video in For You labelled Affiliate, and a live shopping room in dark mode" },
+        { src: "/work/show-and-tell/light-price.webp", alt: "Checkout: A price changed. Atelier Nord changed Everyday Structured Tote from £34.99 to £36.99, with Accept new price and Review bag" },
+        { src: "/work/show-and-tell/dark-bag.webp", alt: "Your bag in dark mode: 3 items from 3 sellers, each sending its own parcel" },
       ],
     },
     sections: [
@@ -640,7 +640,7 @@ export const projects: Project[] = [
         title: "The problem",
         paragraphs: [
           "Buying from a video is quick, but it’s often hard to tell whether the creator is being paid. Delivery costs show up at the end, one bag can hold things from several sellers with different rules, and prices from a live stream can change once it’s over.",
-          "VYRA puts a label on every video, shows the price and delivery dates before the product page, and splits the bag into one parcel per seller. When something changes before you pay, it says what changed and asks first.",
+          "Show & Tell puts a label on every video, shows the price and delivery dates before the product page, and splits the bag into one parcel per seller. When something changes before you pay, it says what changed and asks first.",
         ],
         notes: ["Not knowing if a creator is paid", "Delivery costs that appear at checkout", "One bag, several sellers’ rules", "Prices that change after a live stream"],
       },
@@ -667,7 +667,7 @@ export const projects: Project[] = [
           {
             id: "feed",
             label: "For You",
-            src: "/work/vyra/light-feed.webp",
+            src: "/work/show-and-tell/light-feed.webp",
             alt: "For You: Maya Okafor’s video with an Affiliate label next to her name, and the tote she’s holding at £34.99",
             pins: [
               { x: "65%", y: "63.4%", text: "The label sits next to the creator’s name, so it’s seen before the caption." },
@@ -677,7 +677,7 @@ export const projects: Project[] = [
           {
             id: "label",
             label: "The label",
-            src: "/work/vyra/light-label.webp",
+            src: "/work/show-and-tell/light-label.webp",
             alt: "Affiliate link: Maya Okafor earns commission if you buy through this video. The price is the same for you.",
             pins: [
               { x: "91%", y: "65%", text: "Tapping the label explains it in one sentence, including whether you pay more." },
@@ -688,8 +688,8 @@ export const projects: Project[] = [
           {
             id: "preview",
             label: "Shop it",
-            src: "/work/vyra/light-preview.webp",
-            alt: "Featured in this video: Everyday Structured Tote, £34.99, arriving Wed 11 Nov to Fri 13 Nov, with colour and size choices and Add to bag",
+            src: "/work/show-and-tell/light-preview.webp",
+            alt: "Featured in this video: Everyday Structured Tote, £34.99, arriving Fri 13 Nov to Tue 17 Nov, with colour and size choices and Add to bag",
             pins: [
               { x: "45%", y: "70%", text: "Delivery dates and the free-delivery threshold show before you open the product page." },
               { x: "70%", y: "71.5%", text: "Colour and size are chosen in the sheet, and Add to bag turns off if that option is sold out." },
@@ -699,7 +699,7 @@ export const projects: Project[] = [
           {
             id: "post",
             label: "Posting",
-            src: "/work/vyra/light-labelreq.webp",
+            src: "/work/show-and-tell/light-labelreq.webp",
             alt: "Creator Studio, Post a video: a tagged tote, and a required Disclosure section with the error Choose a label for the products in this video",
             pins: [
               { x: "64%", y: "36.5%", text: "Tagging a product makes the label required." },
@@ -714,12 +714,12 @@ export const projects: Project[] = [
         id: "changes",
         nav: "When something changes",
         title: "When something changes",
-        intro: "Prices, stock and live streams can all change between adding something and paying for it. Each time, VYRA says what changed and waits for you before you can pay.",
+        intro: "Prices, stock and live streams can all change between adding something and paying for it. Each time, Show & Tell says what changed and waits for you before you can pay.",
         steps: [
           {
             id: "price",
             label: "New price",
-            src: "/work/vyra/light-price.webp",
+            src: "/work/show-and-tell/light-price.webp",
             alt: "Almost yours: A price changed. Atelier Nord changed Everyday Structured Tote from £34.99 to £36.99, with Accept new price and Review bag, and Place order turned off",
             pins: [
               { x: "91%", y: "21.5%", text: "If a seller changes a price while it’s in your bag, checkout names the product and shows the old and new price." },
@@ -730,7 +730,7 @@ export const projects: Project[] = [
           {
             id: "soldout",
             label: "Sold out",
-            src: "/work/vyra/light-soldout.webp",
+            src: "/work/show-and-tell/light-soldout.webp",
             alt: "Your bag: 1 item needs attention. The black tote is sold out in that option, with Choose another option and Remove, and Continue to checkout turned off",
             pins: [
               { x: "93%", y: "28%", text: "If stock runs out after you’ve added something, the bag says so at the top." },
@@ -741,7 +741,7 @@ export const projects: Project[] = [
           {
             id: "ended",
             label: "Stream ends",
-            src: "/work/vyra/light-ended.webp",
+            src: "/work/show-and-tell/light-ended.webp",
             alt: "This stream has ended. Your bag is saved, and the products below show today’s prices and stock, with Shop 4 products",
             pins: [
               { x: "93%", y: "43%", text: "When a stream ends, the room says so and keeps your bag." },
@@ -756,14 +756,14 @@ export const projects: Project[] = [
         id: "screens",
         nav: "Around the app",
         title: "Around the app",
-        intro: ["A product opens from the video, the bag splits by seller and checkout shows each parcel’s delivery. Star ratings only count verified purchases, a return asks one question at a time, and Your recommendations shows what VYRA uses to pick videos."],
+        intro: ["A product opens from the video, the bag splits by seller and checkout shows each parcel’s delivery. Star ratings only count verified purchases, a return asks one question at a time, and Your recommendations shows what Show & Tell uses to pick videos."],
         shots: [
-          { src: "/work/vyra/light-product.webp", alt: "Everyday Structured Tote from Atelier Nord: £34.99, 4.7 stars from 1,286 verified ratings, colour choices, and an Illustrative photo label", caption: "Product" },
-          { src: "/work/vyra/light-reviews.webp", alt: "What shoppers think: 4.7 from 1,286 verified ratings, and a note that star ratings only count verified purchases", caption: "Reviews" },
-          { src: "/work/vyra/dark-bag.webp", alt: "Your bag in dark mode: 3 items from 3 sellers, each sending its own parcel, with Atelier Nord’s delivery cost and progress to free delivery", caption: "Bag, dark mode" },
-          { src: "/work/vyra/light-checkout.webp", alt: "Almost yours: delivery address and 3 parcels, each with its own delivery choice, and Place order for £93.89", caption: "Checkout" },
-          { src: "/work/vyra/light-reason.webp", alt: "Return, step 2 of 6: what’s wrong, with whether each reason gets a free return and full refund", caption: "Returns" },
-          { src: "/work/vyra/light-recs.webp", alt: "Your recommendations: a switch for personalised For You, what VYRA uses, and that brands can’t pay to appear in For You", caption: "Your recommendations" },
+          { src: "/work/show-and-tell/light-product.webp", alt: "Everyday Structured Tote from Atelier Nord: £34.99, 4.7 stars from 1,286 verified ratings, colour choices, and an Illustrative photo label", caption: "Product" },
+          { src: "/work/show-and-tell/light-reviews.webp", alt: "What shoppers think: 4.7 from 1,286 verified ratings, and a note that star ratings only count verified purchases", caption: "Reviews" },
+          { src: "/work/show-and-tell/dark-bag.webp", alt: "Your bag in dark mode: 3 items from 3 sellers, each sending its own parcel, with Atelier Nord’s delivery cost and progress to free delivery", caption: "Bag, dark mode" },
+          { src: "/work/show-and-tell/light-checkout.webp", alt: "Almost yours: delivery address and 3 parcels, each with its own delivery choice, and Place order for £93.89", caption: "Checkout" },
+          { src: "/work/show-and-tell/light-reason.webp", alt: "Return, step 2 of 6: what’s wrong, with whether each reason gets a free return and full refund", caption: "Returns" },
+          { src: "/work/show-and-tell/light-recs.webp", alt: "Your recommendations: a switch for personalised For You, what Show & Tell uses, and that brands can’t pay to appear in For You", caption: "Your recommendations" },
         ],
       },
       {
@@ -773,12 +773,12 @@ export const projects: Project[] = [
         title: "Live, creators and sellers",
         intro: ["Live rooms pin the product being shown, with its price. Creators post videos and track earnings in Creator Studio, and sellers dispatch orders and run streams in Seller Centre. In the prototype all three share one set of demo data, so ending a stream in Seller Centre ends it for shoppers too."],
         shots: [
-          { src: "/work/vyra/light-live.webp", alt: "Maya Okafor’s live stream: 1,284 watching, live chat, and the featured Belted Wool-Blend Coat at £89.00 with Shop now", caption: "Live room" },
-          { src: "/work/vyra/light-creator.webp", alt: "Maya Okafor’s profile: 286K followers, Following, Shop collection, and a note that she earns commission on some products", caption: "Creator profile" },
-          { src: "/work/vyra/light-commission.webp", alt: "How creator commission works: a share of the sale if you buy through an affiliate link within 7 days, at the same price, taken back if refunded", caption: "How commission works" },
-          { src: "/work/vyra/light-studio.webp", alt: "Creator Studio dashboard with demo figures: 347K video views, 11K product clicks, 960 eligible purchases and £3,050.72 estimated commission", caption: "Creator Studio" },
-          { src: "/work/vyra/light-sorders.webp", alt: "Seller Centre orders to dispatch within 1 working day, with order number, customer, items and totals", caption: "Seller orders" },
-          { src: "/work/vyra/light-console.webp", alt: "Seller Centre live console: Maya Okafor is hosting Autumn capsule, with End stream and a pinned featured product", caption: "Live console" },
+          { src: "/work/show-and-tell/light-live.webp", alt: "Maya Okafor’s live stream: 1,284 watching, live chat, and the featured Belted Wool-Blend Coat at £89.00 with Shop now", caption: "Live room" },
+          { src: "/work/show-and-tell/light-creator.webp", alt: "Maya Okafor’s profile: 286K followers, Following, Shop collection, and a note that she earns commission on some products", caption: "Creator profile" },
+          { src: "/work/show-and-tell/light-commission.webp", alt: "How creator commission works: a share of the sale if you buy through an affiliate link within 7 days, at the same price, taken back if refunded", caption: "How commission works" },
+          { src: "/work/show-and-tell/light-studio.webp", alt: "Creator Studio dashboard with demo figures: 347K video views, 11K product clicks, 960 eligible purchases and £3,050.72 estimated commission", caption: "Creator Studio" },
+          { src: "/work/show-and-tell/light-sorders.webp", alt: "Seller Centre orders to dispatch within 1 working day, with order number, customer, items and totals", caption: "Seller orders" },
+          { src: "/work/show-and-tell/light-console.webp", alt: "Seller Centre live console: Maya Okafor is hosting Autumn capsule, with End stream and a pinned featured product", caption: "Live console" },
         ],
       },
       {
@@ -1574,7 +1574,7 @@ export const projects: Project[] = [
         note: "Fifteen students is a small sample, so this is an early signal rather than proof.",
       },
     ],
-    next: "atlas",
+    next: "leeway",
   },
 ];
 

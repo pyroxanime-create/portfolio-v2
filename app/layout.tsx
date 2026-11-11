@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Adam Calliste — UX and product designer",
     description: "Clear, honest products, built as working prototypes you can try.",
-    images: ["/projects/atlas.webp"],
+    images: ["/projects/leeway.webp"],
   },
 };
 
